@@ -213,15 +213,17 @@ body{
 
 
 
-.galeria__card{
+.galeria__card {
     border: solid darkgreen 2px;
     width: 550px;
-    height: 100%;
+    /* height: 100%; <-- Ojo con esto, a veces da problemas si el padre no tiene altura, mejor auto o min-height */
+    min-height: 160px; /* Sugerencia de diseño para consistencia */
     text-align: center;
     background-color: rgba(236, 255, 227, 0.5);
     border-radius: 4%;
     overflow: hidden;
     display: flex;
+    align-items: center; /* 👈 ESTO ES CLAVE: Centra la imagen verticalmente respecto al texto */
     margin: 10px;
 }
 
@@ -233,14 +235,13 @@ body{
 
 } */
 
-.galeria__info {
-    display: flex;          /* Activamos Flexbox */
-    flex-direction: column; /* Elementos uno debajo del otro */
-    justify-content: center;/* Centrado Vertical */
-    align-items: center;    /* Centrado Horizontal (eje cruzado) */
-    width: 100%;            /* Ocupa todo el espacio que deja la imagen */
-    padding: 10px;          /* Un poco de aire */
-    text-align: center;     /* Asegura que el texto interno se centre */
+.galeria__texto {
+    width: 95%;
+    /* display: flex;  <-- ELIMINA O COMENTA ESTO. No es necesario en un párrafo de texto normal */
+    margin: 10px auto; /* Separación arriba/abajo y centrado automático */
+    font-style: oblique;
+    font-size: 0.9rem;
+    line-height: 1.4;  /* Mejora la legibilidad */
 }
 
 
