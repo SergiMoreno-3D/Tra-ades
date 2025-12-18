@@ -138,6 +138,7 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
+        
 }
 
 .hero_items{
@@ -224,12 +225,22 @@ body{
     margin: 10px;
 }
 
-.galeria__info{
+/* .galeria__info{
     display: inline-block;
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
 
+} */
+
+.galeria__info {
+    display: flex;          /* Activamos Flexbox */
+    flex-direction: column; /* Elementos uno debajo del otro */
+    justify-content: center;/* Centrado Vertical */
+    align-items: center;    /* Centrado Horizontal (eje cruzado) */
+    width: 100%;            /* Ocupa todo el espacio que deja la imagen */
+    padding: 10px;          /* Un poco de aire */
+    text-align: center;     /* Asegura que el texto interno se centre */
 }
 
 
@@ -456,6 +467,12 @@ main{
 }
 
 @media (max-width: 767px) {
+
+    .hero_items {
+    height: auto; /* Libera la altura fija */
+    width: 100%;  /* Ocupa el ancho disponible */
+    object-fit: cover; /* BONUS: Asegura que si hay dimensiones raras, recorte en vez de deformar */
+    }
 
   /* Evitar scroll horizontal */
   body {
