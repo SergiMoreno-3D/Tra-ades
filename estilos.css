@@ -1,0 +1,550 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body{
+    background-image: url(Imagenes/webp/Background.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 80%;
+    max-width: 1200px; /*Define un ancho máximo*/
+    margin: 0 auto; /*Ajusta los margenes de arriba a 0, y los laterales automiaticamente para centrar en la página*/
+    padding: 0 20px; /*Ajusta el padding a 0 arriba y abajo y añade uno de 20 px para que en los dispositivos moviles se vea mejor y no se junte al borde*/
+}
+
+.container__header{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px;
+}
+
+.menu{
+    display: flex; /*Pone logo y enlaces en fila*/
+    justify-content: space-between; /*Logo a la izquierda y enlaces a la derecha*/
+    align-items: center; /*Centra verticalmente todo*/
+    height: 70px; /*Altura fija del menú*/
+    margin: 5px;
+    
+    /* border: 2px  dotted rgb(0, 26, 255); */
+
+}
+
+.menu__logo{
+    display: flex;
+    align-items: center; /*Centra el logo verticalmente*/
+    height: 70px; /*Ocupa toda la altura del menú (70px)*/
+    margin-left: 40px;
+
+}
+
+.logo__imagen{
+    display: block; /*Evita espacio fantasma debajo*/
+    height: 60px; /*Tamaño fijo para el logo*/
+    background-size: cover;
+        
+    /* border: 2px  dotted rgb(136, 255, 0); */
+
+}
+
+/*MENU ENLACES*/
+
+.enlaces__lista{
+    display: flex; /*Pone los enlaces en fila*/
+    align-items: center;
+
+    list-style: none;/*Quita los puntos de los enlaces*/
+
+    gap: 1.5rem; /*AÑADE espacio entre los enlaces*/
+    margin-right: 40px; /*añade un margen en el lado derecho de la caja*/
+    /* border: 2px  dotted red; */
+}
+
+.enlaces__a{
+    text-decoration: none; /*Para quitar el subrayado de los enlaces*/
+    color: darkgreen;/*Para cambiar el color de los enlaces*/
+    font-weight: 400; /*Para determinar el grosor de la tipografía*/
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.enlaces__a:hover{ /*Atributo que hace que cambie de color el enlace al pasar el cursor por encima*/
+    color: darkorange;
+    text-decoration: underline;
+}
+
+.enlaces__b{
+    text-decoration: none; /*Para quitar el subrayado de los enlaces*/
+    color: rgb(255, 255, 255);/*Para cambiar el color de los enlaces*/
+    font-weight: 900; /*Para determinar el grosor de la tipografía*/
+    font-style:oblique;/*Cambia el estilo de la fuente*/
+    background-color: darkgreen;/*Añade un fondo de color al enlace*/
+    padding: 10px; /*Hace que el fondo sea más ancho*/
+    border-radius: 5px; /*Redondea los bordes del fondo*/
+    transition: 0.2s;
+}
+
+.enlaces__b:hover{
+    background-color:  rgb(236, 255, 227);
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+.menu__derecha{
+    display: flex; /*Pone los enlaces en fila*/
+    align-items: center;
+
+    list-style: none;/*Quita los puntos de los enlaces*/
+
+    gap: 1.5rem; /*AÑADE espacio entre los enlaces*/
+
+    margin-right: 10px; /*añade un margen en el lado derecho de la caja*/
+    /* border: 2px  dotted rgb(184, 181, 0); */
+}
+
+/*HERO*/
+
+.hero{
+    /* border: dotted green; */
+    height: 400px;/*Delimita el alto dela caja*/
+    background-size: cover; /*Para que la imagen se ajuste al espacio de la BOX*/
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+
+}
+
+.hero__imagen{
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hero_items{
+    height: 400px;
+}
+
+.hero__texto{
+    text-align: center;
+}
+
+.hero__titulo{
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero__content{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*Para que se alineen de forma vertical*/
+    justify-content: center;
+    align-items: center;
+    gap: 2%; /*Espacio entre las cajas*/
+    margin-left: auto;    
+}
+
+.hero__cta{
+    width: 150px;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: darkgreen;
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.hero__cta:hover{
+    background-color: rgb(236, 255, 227);
+    color: darkgreen;
+    font-weight: 900;
+}
+
+/*GALERIA*/
+
+.galeria{
+    /* border: dotted green; */
+    margin: 20px auto;
+}
+
+.galeria__titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: darkgreen;
+}
+
+.galeria__subtitulo{
+    text-align: center;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.galeria__contenedor{
+    /* border: dotted darkblue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+.galeria__card{
+    border: solid darkgreen 2px;
+    width: 550px;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(236, 255, 227, 0.5);
+    border-radius: 4%;
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+}
+
+.galeria__info{
+    display: inline-block;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+
+}
+
+
+.galeria__texto{
+    width: 95%;
+    display: flex;
+    margin: auto;
+    font-style: oblique;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+.galeria__avatar{
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 6px;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+.galeria__enlace{
+    font-weight: 600;
+    color: darkgreen;
+    transition: 0.2s;
+
+}
+
+.galeria__enlace:hover{
+    font-weight: 900;
+    color: darkgreen;
+}
+
+/* TESTIMONIOS*/
+
+.testimoniosb{
+    /* border: dotted green; */
+    margin: 20px auto;
+}
+
+.testimoniosb__titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: darkgreen;
+}
+
+.testimoniosb__subtitulo{
+    text-align: center;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.testimoniosb__contenedor{
+    /* border: dotted darkblue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.testimoniob__card{
+    border: solid darkgreen 2px;
+    width: 370px;
+    height: 320px;
+    text-align: center;
+    background-color: rgba(236, 255, 227, 0.5);
+    border-radius: 4%;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+}
+
+.testimoniob__texto{
+    width: 95%;
+    display: flex;
+    margin: auto;
+    font-style: oblique;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+.testimoniob__avatar{
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    margin: 6px auto;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+.testimonio__enlace{
+    font-weight: 600;
+    color: darkgreen;
+    transition: 0.2s;
+}
+
+.testimonio__enlace:hover{
+    font-weight: 900;
+    color: darkgreen;
+}
+
+hr{
+   color: darkgreen;
+   size: 15px;
+}
+
+/*FORMULARIO*/
+
+.form{
+    width: 600px;
+    margin: 20px auto 40px auto;
+}
+
+.form__grupo{
+    display: flex;
+    margin: 10px;
+    gap: 5px;
+    
+}
+
+.form__titulo{
+    display: flex;
+    margin: 20px;
+    color: darkgreen;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos{
+    background-color:rgba(236, 255, 227, 0.5);
+    border: solid darkgreen 2px;
+    border-radius: 3%;
+    padding: 20px;
+}
+
+.form__motivo{
+    display: flex;
+}
+
+input[type="text"]{
+    width: 50%;
+}
+
+input[type="email"]{
+    width: 72%;
+}
+
+input[type="motivo"]{
+    width: 105%;
+    height: 100px;
+    text-justify: initial;
+}
+
+input[type=submit]{
+    width: 100px;
+    height: 30px;
+    color: rgb(236, 255, 227);
+    background-color:darkgreen;
+    border-radius: 9%;
+}
+
+input[type=submit]:hover{
+    width: 100px;
+    height: 30px;
+    color: darkgreen;
+    background-color:rgb(255, 255, 255);
+    border-radius: 9%;
+    font-weight: 600;
+}
+
+
+/*FOOTER*/
+
+.container__footer{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px;
+}
+
+.legal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.menu__legal{
+    list-style: none;
+}
+
+.titol__footer{
+    color: darkgreen;
+    margin-left: 20px;
+}
+
+.xarxes{
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+.copyright{
+    display: flex;
+    justify-content: left;
+    margin: 20px;
+}
+
+html, body{
+    height: 100%;
+}
+
+main{
+    flex: 1;
+}
+
+.menu__hamburguesa {
+  display: none;
+  font-size: 1.8rem;
+  color: darkgreen;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+  /* Evitar scroll horizontal */
+  body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* MENÚ */
+  .menu {
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+  }
+
+  .menu__hamburguesa {
+    display: block;
+    margin-right: 20px;
+
+  }
+
+  .menu__derecha {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .enlaces__lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    display: none;
+    margin: 15px 0;
+  }
+
+  /* 👇 AQUÍ ESTÁ LA CLAVE */
+  .menu:focus-within .enlaces__lista {
+    display: flex;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero__imagen,
+  .hero__content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero__content {
+    padding: 20px 10px;
+    gap: 10px;
+  }
+
+  .hero__titulo {
+    font-size: 1.8rem;
+  }
+
+  .hero__texto {
+    font-size: 1rem;
+  }
+
+  /* GALERÍA Y TESTIMONIOS */
+  .galeria__card,
+  .testimoniob__card {
+    width: 100%;
+  }
+
+  /* FORMULARIO */
+  .form {
+    width: 100%;
+  }
+
+  .form__grupo {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="motivo"] {
+    width: 100%;
+  }
+}
